@@ -39,6 +39,7 @@ namespace XInputVisualizer
             this.comboBoxJoystick = new System.Windows.Forms.ComboBox();
             this.pictureBoxButton7 = new System.Windows.Forms.PictureBox();
             this.pictureBoxButton8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTimeLine = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxStick)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton2)).BeginInit();
@@ -48,6 +49,7 @@ namespace XInputVisualizer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTimeLine)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBoxStick
@@ -160,11 +162,22 @@ namespace XInputVisualizer
             this.pictureBoxButton8.TabStop = false;
             this.pictureBoxButton8.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxButton8_Paint);
             // 
+            // pictureBoxTimeLine
+            // 
+            this.pictureBoxTimeLine.BackColor = System.Drawing.Color.White;
+            this.pictureBoxTimeLine.Location = new System.Drawing.Point(20, 272);
+            this.pictureBoxTimeLine.Name = "pictureBoxTimeLine";
+            this.pictureBoxTimeLine.Size = new System.Drawing.Size(490, 200);
+            this.pictureBoxTimeLine.TabIndex = 10;
+            this.pictureBoxTimeLine.TabStop = false;
+            this.pictureBoxTimeLine.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxTimeLine_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 275);
+            this.ClientSize = new System.Drawing.Size(535, 490);
+            this.Controls.Add(this.pictureBoxTimeLine);
             this.Controls.Add(this.pictureBoxButton8);
             this.Controls.Add(this.pictureBoxButton7);
             this.Controls.Add(this.comboBoxJoystick);
@@ -188,6 +201,7 @@ namespace XInputVisualizer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButton8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTimeLine)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,6 +218,7 @@ namespace XInputVisualizer
         private System.Windows.Forms.ComboBox comboBoxJoystick;
         private System.Windows.Forms.PictureBox pictureBoxButton7;
         private System.Windows.Forms.PictureBox pictureBoxButton8;
+        private System.Windows.Forms.PictureBox pictureBoxTimeLine;
     }
 }
 
