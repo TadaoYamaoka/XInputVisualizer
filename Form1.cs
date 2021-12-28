@@ -219,6 +219,7 @@ namespace XInputVisualizer
 
             int pos = currentPos;
             int num = (pictureBoxTimeLine.Width - 16) / 4;
+            Span<int> offCounts = stackalloc int[btnFlags.Length];
             for (int j = 0; j < num; j++)
             {
                 pos--;
@@ -234,13 +235,26 @@ namespace XInputVisualizer
                     if (k < 8)
                     {
                         if ((history[pos] & dirMask) == btnFlags[k])
+                        {
                             drawOn(g, k, x2, y2);
+                            offCounts[k] = 1;
+                        }
+                        else if (offCounts[k] > 0)
+                            offCounts[k]++;
                     }
                     else
                     {
                         if ((history[pos] & btnFlags[k]) > 0)
+                        {
                             drawOn(g, k, x2, y2);
+                            offCounts[k] = 1;
+                        }
+                        else if (offCounts[k] > 0)
+                            offCounts[k]++;
                     }
+
+                    if (offCounts[k] == 6)
+                        g.DrawString(btnNames[k], drawFont, Brushes.Black, new Point(x2, y2 - 7));
                 }
             }
         }
