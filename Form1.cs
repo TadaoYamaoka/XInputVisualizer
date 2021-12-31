@@ -27,7 +27,7 @@ namespace XInputVisualizer
         Pen linePen = new Pen(Color.LightGray, 1);
         Pen onPen = new Pen(Color.Gray, 4.5F);
         Pen onPen2 = new Pen(Color.DarkGray, 4.5F);
-        Font drawFont = new Font("MS Serif", 8);
+        Font drawFont = new Font("MS Serif", 11F, GraphicsUnit.Pixel);
         string[] btnNames = new string[] { "↑", "↗", "→", "↘", "↓", "↙", "←", "↖", "X", "Y", "A", "B", "LB", "RB", "LT", "RT" };
         int[] btnFlags = new int[] {
             (int)GamepadButtons.DPadUp, (int)GamepadButtons.DPadUp | (int)GamepadButtons.DPadRight,
